@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Конкурс каверов школы 657 «ВИДЕНИЕ»</title>
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent-gradient: linear-gradient(90deg, #ff416c, #ff4b2b, #ff8e3b, #ffd319, #ddfdcc, #a8edea, #3f37c9);
+      --bg: #f4f7f6;
+      --text: #333;
+      --white: #ffffff;
+    }
+    body {
+      font-family: Inter, Roboto, Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    header {
+      background: var(--white);
+      padding: 15px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .logo-wrapper img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+    .socials {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .social-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--white);
+      font-weight: bold;
+      transition: transform 0.2s, filter 0.2s;
+    }
+    .social-btn:hover { transform: scale(1.1); filter: brightness(1.1); }
+    .social-tiktok { background: #00F7FF; }
+    .social-youtube { background: #FF0000; }
+    .social-max { background: #000000; }
+    .social-rutube { background: #FF3333; }
+    .social-telegram { background: #2481CC; }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: var(--white);
+      margin-bottom: 40px;
+      border-radius: 8px;
+    }
+    .hero h1 {
+      color: var(--primary);
+      margin: 0 0 12px 0;
+    }
+    .hero p {
+      color: #666;
+      margin: 0 0 24px 0;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: transform 0.2s, filter 0.2s;
+    }
+    .btn.primary {
+      background: var(--primary);
+      color: var(--white);
+    }
+    .btn.accent {
+      background: var(--accent-gradient);
+      color: var(--white);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .btn:hover { transform: translateY(-2px); filter: brightness(1.05); }
+
+    section { padding: 40px 0; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--white);
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      padding: 40px 0 20px 0;
+      text-align: center;
+    }
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .footer-logo img {
+      height: 50px;
+      width: auto;
+      display: block;
+    }
+    .footer-subtitle {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+    @media (max-width: 600px) {
+      .header-inner { flex-direction: column; align-items: stretch; }
+      .socials { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <div class="logo-wrapper">
+        <!-- Вставь сюда путь к файлу логотипа -->
+        <img src="logo.png" alt="ГБОУ Школа №657 ВИДЕНИЕ 2027">
+      </div>
+      <div class="socials">
+        <a href="https://www.tiktok.com/@657vision" class="social-btn social-tiktok" title="TikTok">TT</a>
+        <a href="https://www.youtube.com/@657vision" class="social-btn social-youtube" title="YouTube">YT</a>
+        <a href="https://max.ru/join/QlyVnySAZ7k0ZCB5wtZDO52fsAPfdM1kR_VL8YplvNI" class="social-btn social-max" title="MAX">M</a>
+        <a href="https://rutube.ru/channel/34641313/" class="social-btn social-rutube" title="RuTube">RT</a>
+        <a href="https://t.me/VISION657" class="social-btn social-telegram" title="Telegram">TG</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="container">
+      <h1>Конкурс каверов школы №657 «ВИДЕНИЕ»</h1>
+      <p>Раскрой свой голос и стиль. Покажи свою интерпретацию любимой песни.</p>
+      <a href="#apply" class="btn accent">Подать заявку</a>
+      <a href="#rules" class="btn primary">Правила</a>
+    </div>
+  </div>
+
+  <section id="rules">
+    <div class="container">
+      <h2>Условия участия</h2>
+      <div class="grid">
+        <div class="card"><h3>Кто может участвовать</h3><p>Ученики школы 657 всех классов.</p></div>
+        <div class="card"><h3>Требования к каверам</h3><p>Длительность до 4 минут, формат MP4/MP3, можно менять аранжировку.</p></div>
+        <div class="card"><h3>Дедлайн</h3><p>Приём заявок до 15 октября.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Критерии оценки</h2>
+      <ul>
+        <li>Вокал и интонация</li>
+        <li>Артистизм и подача</li>
+        <li>Работа команды (бэк‑вокал, инструменты, видео)</li>
+        <li>Оригинальность трактовки</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="apply">
+    <div class="container">
+      <h2>Подать заявку</h2>
+      <form>
+        <label style="display:block; margin-bottom:8px; font-weight:600;">Имя и класс</label>
+        <input type="text" style="width:100%; padding:10px; margin-bottom:16px; border:1px solid #ddd; border-radius:6px;">
+        <label style="display:block; margin-bottom:8px; font-weight:600;">Название трека и оригинал</label>
+        <input type="text" style="width:100%; padding:10px; margin-bottom:16px; border:1px solid #ddd; border-radius:6px;">
+        <label style="display:block; margin-bottom:8px; font-weight:600;">Ссылка на видео/файл</label>
+        <input type="url" placeholder="YouTube / Google Drive / Яндекс Диск" style="width:100%; padding:10px; margin-bottom:16px; border:1px solid #ddd; border-radius:6px;">
+        <button type="submit" class="btn primary" style="width:100%;">Отправить заявку</button>
+      </form>
+      <p style="color:#777; margin-top:12px;">Файлы принимаются через Google Drive/Яндекс Диск. Ссылка должна быть доступна для просмотра.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <!-- Вставь сюда путь к файлу логотипа -->
+        <img src="logo.png" alt="ГБОУ Школа №657 ВИДЕНИЕ 2027">
+      </div>
+      <div class="footer-subtitle">Конкурс каверов школы №657</div>
+      <div style="font-size:0.9rem;">Организатор: куратор конкурса, школа 657<br>
+        Контакты: email@school657.ru | +7 (XXX) XXX‑XX‑XX</div>
+    </div>
+  </footer>
+
+</body>
+</html>
