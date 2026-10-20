@@ -2,7 +2,12 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Конкурс каверов школы 657 «ВИДЕНИЕ»</title>
+  <!-- Подключаем шрифт Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #0056b3;
@@ -12,7 +17,7 @@
       --white: #ffffff;
     }
     body {
-      font-family: Inter, Roboto, Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
       line-height: 1.6;
       color: var(--text);
@@ -38,7 +43,7 @@
       flex-wrap: wrap;
       gap: 15px;
     }
-    .logo-wrapper img {
+    .logo-wrapper img, .footer-logo img {
       height: 60px;
       width: auto;
       display: block;
@@ -74,14 +79,8 @@
       margin-bottom: 40px;
       border-radius: 8px;
     }
-    .hero h1 {
-      color: var(--primary);
-      margin: 0 0 12px 0;
-    }
-    .hero p {
-      color: #666;
-      margin: 0 0 24px 0;
-    }
+    .hero h1 { color: var(--primary); margin: 0 0 12px 0; }
+    .hero p { color: #666; margin: 0 0 24px 0; }
     .btn {
       display: inline-block;
       padding: 12px 24px;
@@ -90,10 +89,7 @@
       font-weight: 600;
       transition: transform 0.2s, filter 0.2s;
     }
-    .btn.primary {
-      background: var(--primary);
-      color: var(--white);
-    }
+    .btn.primary { background: var(--primary); color: var(--white); }
     .btn.accent {
       background: var(--accent-gradient);
       color: var(--white);
@@ -127,11 +123,6 @@
       align-items: center;
       gap: 20px;
     }
-    .footer-logo img {
-      height: 50px;
-      width: auto;
-      display: block;
-    }
     .footer-subtitle {
       font-size: 1.1rem;
       font-weight: 600;
@@ -148,7 +139,7 @@
   <header>
     <div class="container header-inner">
       <div class="logo-wrapper">
-        <!-- Вставь сюда путь к файлу логотипа -->
+        <!-- ВАЖНО: проверь, что файл logo.png лежит в той же папке, что и index.html -->
         <img src="logo.png" alt="ГБОУ Школа №657 ВИДЕНИЕ 2027">
       </div>
       <div class="socials">
@@ -196,13 +187,17 @@
   <section id="apply">
     <div class="container">
       <h2>Подать заявку</h2>
-      <form>
+      <!-- ВАЖНО: замени XXXXX на свой email, зарегистрированный на formspree.io -->
+      <form action="https://formspree.io/f/XXXXX" method="POST">
         <label style="display:block; margin-bottom:8px; font-weight:600;">Имя и класс</label>
-        <input type="text" style="width:100%; padding:10px; margin-bottom:16px; border:1px solid #ddd; border-radius:6px;">
+        <input type="text" name="name_class" required style="width:100%; padding:10px; margin-bottom:16px; border:1px solid #ddd; border-radius:6px;">
+
         <label style="display:block; margin-bottom:8px; font-weight:600;">Название трека и оригинал</label>
-        <input type="text" style="width:100%; padding:10px; margin-bottom:16px; border:1px solid #ddd; border-radius:6px;">
+        <input type="text" name="track_info" required style="width:100%; padding:10px; margin-bottom:16px; border:1px solid #ddd; border-radius:6px;">
+
         <label style="display:block; margin-bottom:8px; font-weight:600;">Ссылка на видео/файл</label>
-        <input type="url" placeholder="YouTube / Google Drive / Яндекс Диск" style="width:100%; padding:10px; margin-bottom:16px; border:1px solid #ddd; border-radius:6px;">
+        <input type="url" name="video_link" required placeholder="YouTube / Google Drive / Яндекс Диск" style="width:100%; padding:10px; margin-bottom:16px; border:1px solid #ddd; border-radius:6px;">
+
         <button type="submit" class="btn primary" style="width:100%;">Отправить заявку</button>
       </form>
       <p style="color:#777; margin-top:12px;">Файлы принимаются через Google Drive/Яндекс Диск. Ссылка должна быть доступна для просмотра.</p>
@@ -212,7 +207,7 @@
   <footer>
     <div class="container footer-inner">
       <div class="footer-logo">
-        <!-- Вставь сюда путь к файлу логотипа -->
+        <!-- ВАЖНО: проверь, что файл logo.png лежит в той же папке, что и index.html -->
         <img src="logo.png" alt="ГБОУ Школа №657 ВИДЕНИЕ 2027">
       </div>
       <div class="footer-subtitle">Конкурс каверов школы №657</div>
@@ -223,3 +218,4 @@
 
 </body>
 </html>
+
