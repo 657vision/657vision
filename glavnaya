@@ -47,6 +47,7 @@
       height: 60px;
       width: auto;
       display: block;
+      /* loading="lazy" уже добавлен в HTML, чтобы картинка грузилась плавно */
     }
     .socials {
       display: flex;
@@ -139,8 +140,8 @@
   <header>
     <div class="container header-inner">
       <div class="logo-wrapper">
-        <!-- ВАЖНО: проверь, что файл logo.png лежит в той же папке, что и index.html -->
-        <img src="logo.png" alt="ГБОУ Школа №657 ВИДЕНИЕ 2027">
+        <!-- ВАЖНО: src изменен на logo.jpg, как у тебя -->
+        <img src="logo.jpg" alt="ГБОУ Школа №657 ВИДЕНИЕ 2027" loading="lazy">
       </div>
       <div class="socials">
         <a href="https://www.tiktok.com/@657vision" class="social-btn social-tiktok" title="TikTok">TT</a>
@@ -187,7 +188,7 @@
   <section id="apply">
     <div class="container">
       <h2>Подать заявку</h2>
-      <!-- ВАЖНО: замени XXXXX на свой email, зарегистрированный на formspree.io -->
+      <!-- ВАЖНО: замени XXXXX на свою ссылку из Formspree -->
       <form action="https://formspree.io/f/XXXXX" method="POST">
         <label style="display:block; margin-bottom:8px; font-weight:600;">Имя и класс</label>
         <input type="text" name="name_class" required style="width:100%; padding:10px; margin-bottom:16px; border:1px solid #ddd; border-radius:6px;">
@@ -207,8 +208,8 @@
   <footer>
     <div class="container footer-inner">
       <div class="footer-logo">
-        <!-- ВАЖНО: проверь, что файл logo.png лежит в той же папке, что и index.html -->
-        <img src="logo.png" alt="ГБОУ Школа №657 ВИДЕНИЕ 2027">
+        <!-- ВАЖНО: src изменен на logo.jpg, как у тебя -->
+        <img src="logo.jpg" alt="ГБОУ Школа №657 ВИДЕНИЕ 2027" loading="lazy">
       </div>
       <div class="footer-subtitle">Конкурс каверов школы №657</div>
       <div style="font-size:0.9rem;">Организатор: куратор конкурса, школа 657<br>
@@ -218,4 +219,3 @@
 
 </body>
 </html>
-
